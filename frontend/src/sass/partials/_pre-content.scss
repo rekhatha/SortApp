@@ -1,0 +1,49 @@
+/* Pre-header & Header Content */
+header {
+
+		h1 {
+		margin:$universal 0 0 $universal-negative;
+		letter-spacing: -1px;
+		font-size:48px;
+		line-height:48px;
+		cursor: pointer;
+		display:inline-block;
+
+		a{color:$brand-primary;
+
+		&:hover,
+		&:focus{text-decoration: none;};
+		}
+	}
+
+	h3{
+		margin:0 0 $universal $universal/2;
+		cursor: pointer;
+		color:$brand-accent;
+		font-weight: lighter;
+		font-style: italic;
+		display: inline-block;
+		font-size: 1.2em;
+	}
+}
+
+	.header-main{
+		position: relative;
+	}
+
+	.pre-header{
+		background-color:#000;
+		color:$text-color-inverse;
+		height:$universal*3;
+		padding:0;
+	}
+		.pre-header-inner{
+			position:relative;
+
+			.logo-qc{position:relative; top:0; left:0}
+
+		}
+
+
+
+

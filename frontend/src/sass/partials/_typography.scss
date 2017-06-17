@@ -1,0 +1,75 @@
+	@font-face{
+		font-family:'QualcommWeb';
+		src:url(../fonts/QualcommWeb-Light.eot);
+		src:
+		url(../fonts/QualcommWeb-Light.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/QualcommWeb-Light.woff) format("woff"),
+		url(../fonts/QualcommWeb-Light.ttf) format("truetype");
+		font-weight:200;
+		font-style:normal;}
+	
+
+	@font-face{
+		font-family:'QualcommWeb';
+		src:url(../fonts/QualcommWeb-Regular.eot);
+		src:
+		url(../fonts/QualcommWeb-Regular.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/QualcommWeb-Regular.woff) format("woff"),
+		url(../fonts/QualcommWeb-Regular.ttf) format("truetype");
+		font-weight:400;
+		font-style:normal;}
+
+	@font-face{
+		font-family:'QualcommWeb';
+		src:url(../fonts/QualcommWeb-Semibold.eot);
+		src:
+		url(../fonts/QualcommWeb-Semibold.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/QualcommWeb-Semibold.woff) format("woff"),
+		url(../fonts/QualcommWeb-Semibold.ttf) format("truetype");
+		font-weight:700;
+		font-style:normal;}
+
+	$font-family-brand:"QualcommWeb","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-family-brand;
+  font-weight: bold;
+  line-height: $headings-line-height;
+  color: #000;
+}
+
+h1,h2,h3{
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed / 2);
+}
+
+
+
+h4,h5,h6{
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+}
+
+	h1{ font-size: $font-size-h1; color:$brand-primary; }
+	h2{ font-size: $font-size-h2; }
+	h3{ font-size: $font-size-h3; }
+	h4{ font-size: $font-size-h4; }
+	h5{ font-size: $font-size-h5; }
+	h6{ font-size: $font-size-h6; }
+
+	.panel-heading{
+		h1, h2, h3, h4, h5, h6{
+			color:$headings-color;
+		}
+	}
+
+	h5.file-type{
+		margin-top: 0;
+		font-size:1.3em;
+	}
+
+

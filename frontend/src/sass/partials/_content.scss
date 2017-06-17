@@ -1,0 +1,120 @@
+html{
+    background: $brand-gray-light url(../images/textures/diagonal-noise.png);
+}
+body {
+    background-color:transparent;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+}
+
+.container-exceptions{
+    padding:$universal*2 $universal;
+    text-align: center;
+    position: relative;
+    color:$type-danger;
+
+    i{
+        @include text-shadow(0 0 10px #fff);
+    }
+}
+
+.panel{border:1px solid #ccc;}
+.panel-first{margin-top: $universal;}
+
+    .panel-heading{
+        h3{margin-top: $universal/2;}
+
+    }
+
+    .col-misc{
+        .alert{
+            margin-top: $universal;
+        }
+    }
+
+    .panel-sub{
+        padding:$universal;
+    }
+
+
+/* STATUS and ALERTS */
+.alert{
+    @include box-shadow(0px 1px 1px rgba(0, 0, 0, 0.05));
+}
+
+.status-warn{
+    color:$type-warning;
+}
+
+.file-status-processing{color:$type-info;}
+.file-status-success{color:$type-success;}
+.file-status-failed{color:$type-danger;}
+
+.file-select{
+    width:100%;
+}
+
+
+form{
+    
+    label{
+            font-weight: bold;
+            font-size: 1.2em;
+
+            &.help-contextual{
+                display:block;
+
+                i{
+                    position: relative;
+                }
+            }
+    }
+}
+
+.form-group select.form-control{
+    color:#000;
+    font-size:1.2em;
+}
+
+form.file-upload{
+    
+    .form-group{
+        display: inline-block;
+        width: 30%;
+        margin-right: 2%;
+     
+    }
+}
+
+/*Definition Lists*/
+
+.definitions-generic{
+    margin-left: $universal;
+
+    dd{
+        border-bottom: $subtle-border-dotted;
+        padding-bottom: $universal/2;
+        margin-bottom: $universal/2;
+    }
+}
+
+#app-footer{
+    margin-left: 4em;
+    padding-left: $universal;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 40px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+

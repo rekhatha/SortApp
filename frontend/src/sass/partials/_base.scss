@@ -1,0 +1,139 @@
+/* Qualcomm Branding Colors */
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 46.7%) !default; // #777
+$gray-subtle: 			 lighten(#000, 80%) !default; // 
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+
+$brand-gray:			 #fafafa;
+$brand-gray-light: 		 #dfdfdf;
+
+
+$brand-pallete-colors:(
+	brand-purple: 			#8f287C,
+	brand-blue: 			#008d95,
+	brand-aqua: 			#b3d676,
+	brand-violet: 			#bc141a,
+	brand-white:           	#fff,
+);
+
+
+@function brand-color($key){
+	@if map-has-key($brand-pallete-colors, $key){
+		@return map-get($brand-pallete-colors, $key);
+	}
+	@warn "Unknown '#{$key}' in $brand-pallete-colors.";
+	@return null;
+}
+
+
+$brand-pallete:(
+	qc-purple:brand-color(brand-purple),
+	qc-blue:brand-color(brand-blue),
+	qc-aqua:brand-color(brand-aqua),
+	qc-violet:brand-color(brand-violet),
+	qc-white:brand-color(brand-white)
+);
+
+$brand-pallete-dark:(
+	qc-purple:brand-color(brand-purple),
+	qc-blue:brand-color(brand-blue),
+	qc-violet:brand-color(brand-violet)
+);
+
+$brand-primary:         #00adbe !default;
+$brand-primary-dark:	darken($brand-primary, 15%) !default;
+$brand-secondary: 		#047681;
+$brand-accent:			#f79220;
+$brand-subtle:  		#fff7cd;
+
+$border-color:  		#00adbe;
+$brand-border:			1px solid $border-color;
+$brand-border-dashed:   1px dashed $border-color;
+$brand-border-dotted:   1px dotted $border-color;
+
+$subtle-border:			1px solid $gray-subtle;
+$subtle-border-dashed:   1px dashed $gray-subtle;
+$subtle-border-dotted:   1px dotted $gray-subtle;
+
+$brand-border-alt:      1px solid #9caebf;
+
+$body-bg:               #fff !default;
+
+$text-color:            #000 !default;
+$text-color-inverse:	#fff !default;
+$link-color:            $brand-primary !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$task-success:   		#007030;
+$task-success-fg: 		#5BB180;
+$task-success-bkg: 		#b1ecc0;
+
+$type-success:  		#3C763D;
+$type-success-dark: 	#B4C3A8; /* darker green */
+$type-info: 			#31708F;
+$type-warning: 			#f79220;
+$type-warning-bkg: 		#8A6D3B;
+$type-danger: 			#A94442;
+
+$universal: 15px;
+$universal-negative:-$universal;
+$footer-sticky-height: 	150px;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          brand-color(brand-purple);
+
+.sr-only{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
+}
+
+$breakpoints: (
+  'small'  : ( min-width:  767px ),
+  'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px )
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+        + "Please ensure it is listed in the `$breakpoints` map.";
+  }
+}
+

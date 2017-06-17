@@ -1,0 +1,46 @@
+
+<form class="form-horizontal"  name="sortForm">
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-8 ">
+				<div class="form-group">
+					<label for="sortInput" class="col-md-5 control-label">Enter the numbers to sort</label>
+					<div class="col-md-6">
+						<input type="text" name="Sort Numbers" class="form-control"
+                                                          ng-model="sortNumbers" ng-required="true"
+                                                          ng-maxlength="250">
+                                                          
+					</div>
+				</div>
+				
+				<div class="form-group" ng-if ="result == true">
+				<label for="sortResult" class="col-md-5 control-label">Sorted Array is:</label>
+   					<div class = "col-md-6">
+   					<input type="text" name="Sort Result" class="form-control" value ="{{resultArray}}">
+					</div>
+					</div>
+					
+					
+
+				
+				<div class="form-group"  ng-if ="result == true">
+				<label for="time" class="col-md-5 control-label">Time Consumed is:</label>
+   					<div class = "col-md-6">
+                     
+                    <input type="text" name="time" class="form-control" value="{{timeConsumed}}">
+ 					
+					</div>
+					</div>
+
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-primary" ng-click="sortNumber()" ng-disabled="buttonDisabled">
+			<span class="glyphicon"></span> Ascending Sort
+		</button>
+		<button type="button" class="btn btn-default" ng-click="reset()">Reset</button>
+	</div>
+</form>

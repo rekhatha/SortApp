@@ -1,0 +1,47 @@
+//essentials
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+	padding:0; margin:0;
+	font-family:$font-family-brand;
+	margin-bottom: $footer-sticky-height + $universal;
+	color:$text-color;
+}
+
+@each $body-class, $color-value in $brand-pallete{
+	body.#{$body-class}{
+		background: $color-value url(../images/textures/whitediamond.png) repeat;
+	}
+}
+
+a,a:link,a:focus,a:active{outline:none; cursor: pointer;}
+
+.message-exception{
+	padding:$universal*2 $universal;
+	text-align: center;
+	position: relative;
+	color:$type-danger;
+}
+
+.dropdown-menu{ @include border-radius(0); }
+
+.action-context{
+	text-align: right;
+
+	a{
+		font-size:.85em;
+
+		i.fa-close{
+			color:$type-danger;
+		}
+	}
+}
+
+
+
+
+
+

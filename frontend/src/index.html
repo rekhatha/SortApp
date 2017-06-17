@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" ng-app="frontend">
+<head>
+<meta charset="utf-8">
+
+<title>HM-Sorting Application</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<!-- <base href="/ccgapprovals"/> -->
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- build:css({.tmp,src}) /assets/styles/vendor.css -->
+<!--  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" /> -->
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="../bower_components/metisMenu/dist/metisMenu.min.css">
+
+<link href="assets/css/theme.default.css" rel="stylesheet">
+
+
+<!-- bower:css -->
+<link rel="stylesheet" href="../bower_components/metisMenu/dist/metisMenu.css" />
+<link rel="stylesheet" href="../bower_components/ng-table/dist/ng-table.min.css" />
+<link rel="stylesheet" href="../bower_components/ng-tags-input/ng-tags-input.min.css" />
+<link rel="stylesheet" href="../bower_components/angular-ui-select/dist/select.css" />
+<link rel="stylesheet" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="../bower_components/angular-block-ui/dist/angular-block-ui.css" />
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:css({.tmp,src}) /assets/styles/app.css -->
+<link rel="stylesheet" media="screen, projection" href="assets/css/animate.min.css">
+<link rel="stylesheet" media="screen, projection" href="assets/css/screen.css">
+<link rel="stylesheet" media="screen, projection" href="assets/css/app.css">
+
+<!-- endbuild -->
+
+<!-- build:css({.tmp,src}) /assets/styles/print.css media="print" -->
+<link rel="stylesheet" media="print" href="assets/css/print.css">
+<!-- endbuild -->
+
+<!-- build:js scripts/modernizr.js -->
+<script src="../bower_components/modernizr/modernizr.js"></script>
+<!-- endbuild -->
+</head>
+<body>
+	<!--[if lt IE 10]>
+      <p>Really? Microsfot Internet Explorer?</p>
+    <![endif]-->
+	<div ng-include="'components/navbar/navbar.html'"></div>
+	<div ng-view></div>
+	<div ng-include="'components/footer/footer.html'"></div>
+
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="../bower_components/angular-touch/angular-touch.js"></script>
+	<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script src="../bower_components/angular-route/angular-route.js"></script>
+	<script src="../bower_components/angular-vertilize/angular-vertilize.js"></script>
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+	<script src="../bower_components/metisMenu/dist/metisMenu.js"></script>
+	<script src="../bower_components/ng-table/dist/ng-table.min.js"></script>
+	<script src="../bower_components/ng-file-upload/ng-file-upload.js"></script>
+	<script src="../bower_components/angular-growl/build/angular-growl.js"></script>
+	<script src="../bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+	<script src="../bower_components/angular-ui-select/dist/select.js"></script>
+	<script src="../bower_components/moment/moment.js"></script>
+	<script src="../bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../bower_components/angular-eonasdan-datetimepicker/dist/angular-eonasdan-datetimepicker.js"></script>
+	<script src="../bower_components/angular-block-ui/dist/angular-block-ui.js"></script>
+	<!-- endbower -->
+	<script src="../bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,src}) scripts/app.js -->
+	<script src="app/config.js"></script>
+	<script src="app/provider.js"></script>
+	<script src="app/route.js"></script>
+
+	<script src="app/hmsort/sortController.js"></script>
+	<script src="app/hmsort/sortService.js"></script>
+	<!--  End -->
+
+	<!--  jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="assets/js/jquery.min.js"></script> -->
+	<!--   Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/app.js"></script>
+
+	<script src="assets/js/jquery.tablesorter.min.js"></script>
+	<script src="assets/js/jquery.tablesorter.widgets.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.js"></script>
+	<!--   <script type="text/javascript" src="assets/js/moment-with-locales.js"></script>
+     
+    <!-- <script src="components/navbar/navbar.controller.js"></script> -->
+	<script src="components/ngjquery/ngjquery.js"></script>
+	<!-- inject:partials -->
+	<!-- angular templates will be automaticaly converted in js and inserted here -->
+	<!-- endinject -->
+	<!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* FOOTER */
+/*
+@include sticky-footer(75px, "#wrapper","#wrapper-footer","#app-footer");
+*/
+#footer {
+  position: absolute;
+  margin-top:$universal;
+  bottom: 0;
+  width: 100%;
+  height: $footer-sticky-height;
+  padding-top: $universal;
+  line-height: 1.2em;
+
+  @media only screen and (min-width : 768px) and (max-width : 1024px){
+  	padding-left:0;
+  	padding-right:0;
+  }
+  @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation: portrait){
+  	height: $footer-sticky-height + 50px;
+  }
+}
+		.footer-container{
+			position:relative;
+			margin-left:$universal-negative; 
+			margin-right: $universal-negative;
+			img{
+				margin-bottom: $universal+5px;
+			}
+		}
+						
+			.footer-text{
+				font-size:.8em; 
+				padding-bottom: $universal;
+
+				p{
+					margin-bottom: 0;
+					
+					@media only screen and (min-width : 768px) and (max-width : 1024px){
+						width:95%;
+					}
+				}
+			}
+
+	
